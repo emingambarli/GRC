@@ -1,0 +1,166 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    width: 90%;
+    max-width: 1200px;
+    height: 80%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.left {
+    flex: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.left .main-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.left .overlay {
+    position: absolute;
+    color: rgb(255, 255, 255);
+    padding: 20px;
+}
+
+.left .overlay .gitlab-logo {
+    width: 160px;
+    height: auto;
+    margin-right: 500px;
+    margin-bottom: 550px;
+}
+
+.left .overlay h1 {
+    font-size: 36px;
+    margin: 1px;
+    background-color: #fc6d26;
+}
+
+.left .overlay h2 {
+    font-size: 24px;
+    margin: 0;
+    background-color: #fc6d26;
+}
+
+.right {
+    flex: 0 0 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 20px;
+    position: relative;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    color: #555;
+    font-size: 14px;
+}
+
+.input-group input, .input-group select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 25px;
+    border: 1px solid #ccc;
+    transition: all 0.3s ease;
+    font-size: 16px;
+}
+
+.input-group input:focus, .input-group select:focus {
+    border-color: #fc6d26;
+    box-shadow: 0 0 10px rgba(251, 109, 27, 0.2);
+}
+
+button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #fc6d26; /* GitLab orange */
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+button[type="submit"]:hover {
+    background-color: #e65122;
+}
+
+h3, h4 {
+    color: #333;
+}
+
+h4 {
+    margin: 20px 0 10px;
+}
+
+.variable-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.variable-group input[type="text"] {
+    flex: 1;
+    max-width: 48%;
+}
+
+#output {
+    margin-top: 20px;
+    color: #28a745; /* Success color */
+    font-weight: bold;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .left, .right {
+        width: 100%;
+        flex: unset;
+    }
+
+    .right {
+        padding: 10px;
+    }
+
+    button[type="submit"] {
+        width: 100%;
+    }
+}
